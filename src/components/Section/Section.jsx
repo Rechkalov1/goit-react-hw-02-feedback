@@ -1,10 +1,10 @@
 import React from "react"
-
+import {Thumb,Title} from './Section.styled'
 export const Section = ({title,children})=>{
     return(
-        <div>
-            <h2>{title}</h2>
+        <Thumb>
+            <Title>{title}</Title>
             {children}
-        </div>
+        </Thumb>
     )
 }

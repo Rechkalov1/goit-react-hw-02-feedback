@@ -1,4 +1,6 @@
-
+ul,li{
+  list-style-type: none;
+}
 
 body {
   margin: 0;
@@ -7,6 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(rgba(0, 195, 255,0.6), rgba(83, 80, 81,0.3))no-repeat center fixed;
+ 
 }
 
 code {
