@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from 'prop-types'
 import {StatisticsThumb,StatisticsItem,StatisticsList} from "./Statistics.styled"
 export const Statistics =({good,neutral,bad,total,goodPercent,neutralPercent})=>{
     return(
