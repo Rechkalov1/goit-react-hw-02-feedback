@@ -21,7 +21,7 @@ export const Button = styled.button`
     border: 2px solid #BFE2FF;
     overflow: hidden;
     z-index: 1;
-    border-radius: 9px;
+    border-radius: 10px;
 
 &:hover,
 &:active,
