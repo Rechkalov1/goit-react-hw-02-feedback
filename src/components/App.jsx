@@ -14,13 +14,14 @@ export class App extends Component {
     return good + neutral + bad;
   }
   countPositiveFeedbackPercentage(propertyName){
-const total =this.countTotalFeedback();
+    const { good, neutral, bad } = this.state;
+  const total = good + neutral + bad;
 if(!total){
   return 0;
 }
-const value = this.state[propertyName];
-const result = (value / total) * 100;
-return Number(result.toFixed(2));
+
+return Math.round((good / total) * 50);
+
   }
   IncrementStatistics = propertyName => {
     this.setState(prevState => {
@@ -33,8 +34,8 @@ return Number(result.toFixed(2));
   render() {
     const { good, neutral, bad } = this.state;
     const total = this.countTotalFeedback();
-    const goodPercent = this.countPositiveFeedbackPercentage('good');
-    const neutralPercent = this.countPositiveFeedbackPercentage('neutral');
+    const goodPercent = this.countPositiveFeedbackPercentage();
+    const neutralPercent = this.countPositiveFeedbackPercentage();
     return (
       <>
         <Section title="Please leave feedback"><>
